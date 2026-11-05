@@ -17,7 +17,12 @@ abstract class Funcionario{
     public function mostrarPagamento(){
     echo "Pagamento: R$ " . $this->calcularPagamento();
 }
-
+    public function mostrarDados(){
+        echo "Nome: " . $this->nome . "\n";
+        echo "CPF: " . $this->cpf . "\n";
+        echo "Cargo: " . $this->cargo . "\n";
+        echo "Salário: R$ " . $this->salario . "\n";
+}
 abstract protected function calcularPagamento();
 }
 

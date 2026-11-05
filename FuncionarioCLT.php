@@ -18,6 +18,14 @@ class FuncionarioCLT extends Funcionario{
         $this->ferias = $ferias;
     }
 
+     public function mostrarDados(){
+        parent::mostrarDados();
+        echo "FGTS: R$ " . $this->fgts . "\n";
+        echo "Descontos: " . $this->descontos . "\n";
+        echo "Benefícios: " . $this->beneficios . "\n";
+        echo "Férias: " . $this->ferias . "\n";
+    }
+
     protected function calcularPagamento(){
         return $this->salario;
 }
