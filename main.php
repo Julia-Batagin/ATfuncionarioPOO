@@ -1,21 +1,16 @@
-
-<?php 
+<?php
 require_once 'FuncionarioCLT.php';
 require_once 'FuncionarioPJ.php';
 
-//Criando os funcionários
-$f[0] = new FuncionarioCLT("João", "12345678900", "Professor", 3000, 300, "200", "Vale alimentação", "30 dias");
+$funcionarioCLT = new FuncionarioCLT("João Silva","123.456.789-00","Professor",3000.00, 240.00,"10","200","30 dias");
 
-$f[1] = new FuncionarioPJ("Maria", "98765432100", "Programadora", 4000, "12345678000100", 5000, "Desenvolvimento de sistemas");
+$funcionarioPJ = new FuncionarioPJ("Maria Souza","987.654.321-11","Desenvolvedora",0.00,"12.345.678/0001-90",5000.00,"Desenvolvimento Web");
 
-//Percorrendo o vetor e mostrando as informações
-foreach ($f as $funcionario){
-    $funcionario->mostrarDados();
 
-    $funcionario->mostrarPagamento();
+$funcionarioCLT->mostrarDados();
+$funcionarioCLT->mostrarPagamento();
 
-    echo "\n";
-    echo "\n";
-}
-
+$funcionarioPJ->mostrarDados();
+$funcionarioPJ->mostrarPagamento();
+echo "\n";
 ?>

@@ -27,7 +27,9 @@ class FuncionarioCLT extends Funcionario{
     }
 
     protected function calcularPagamento(){
-        return $this->salario;
+       $descontos = $this->descontos / 100;
+       $bruto = $this->salario + $this->beneficios;
+       $liquido = $bruto - ($bruto * $descontos);
 }
 }
 
